@@ -3,5 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root 'welcome#index'
+  post "/graphql", to: "graphql#execute"
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  mount GraphqlPlayground::Rails::Engine, at: '/graphql-playground', graphql_path: '/graphql'
 end

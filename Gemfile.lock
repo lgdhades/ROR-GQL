@@ -90,6 +90,9 @@ GEM
     erubi (1.12.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    graphql (2.0.16)
+    graphql_playground-rails (2.1.0)
+      rails (>= 5.1.0)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.1.5)
@@ -220,6 +223,8 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  graphql
+  graphql_playground-rails
   importmap-rails
   jbuilder
   pg (~> 1.1)
