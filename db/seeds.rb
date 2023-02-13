@@ -3,13 +3,13 @@ require 'uri'
 
 # hardcoded because it won't be changed during this projects life
 uri = URI('https://hacker-news.firebaseio.com/v0/newstories.json')
-ids = Net::HTTP.get_response(uri)
+ids = JSON.parse(Net::HTTP.get_response(uri).body)
 # puts ids.body if ids.is_a?(Net::HTTPSuccess)
 
 
-puts ids.body
+puts ids.length
 
-ids.body.each{
+ids.each{
     |id| 
     uri = URI("https://hacker-news.firebaseio.com/v0/item/#{id}.json")
     response = Net::HTTP.get_response(uri).body
