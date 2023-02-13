@@ -7,8 +7,9 @@ ids = Net::HTTP.get_response(uri)
 # puts ids.body if ids.is_a?(Net::HTTPSuccess)
 
 
-# puts ids.length
-ids.each{
+puts ids.body
+
+ids.body.each{
     |id| 
     uri = URI("https://hacker-news.firebaseio.com/v0/item/#{id}.json")
     response = Net::HTTP.get_response(uri).body
