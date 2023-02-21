@@ -31,6 +31,9 @@ gem "jbuilder"
 gem 'graphql'
 gem 'graphql_playground-rails'
 
+
+# optional
+
 gem 'faker', '~> 3.1', '>= 3.1.1'
 gem 'net-http', '~> 0.3.2'
 gem 'rack-cors', '~> 2.0'
